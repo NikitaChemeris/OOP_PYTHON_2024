@@ -12,13 +12,13 @@ class Money:
     
     @dollars.setter
     def dollars(self, value):
-        if not isinstance(value, int) or value < 0:
+        if not isinstance(value, int) or value <= 0:
             raise ValueError('Error dolars')
         self.total_cents = value*100 + self.cents
     
     @cents.setter
     def cents(self, value):
-        if not isinstance(value, int) or 0 < value > 99:
+        if not isinstance(value, int) or 0 <= value > 99:
             raise ValueError('Error cents')
         self.total_cents = self.dollars*100 + value
 
