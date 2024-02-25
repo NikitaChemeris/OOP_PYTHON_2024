@@ -3,7 +3,7 @@ class Registration:
         self.login = login
         self.password = password
 
-    @staticmethod
+    @staticmethod               #checking number in values
     def is_include_digit():
         pass
 
