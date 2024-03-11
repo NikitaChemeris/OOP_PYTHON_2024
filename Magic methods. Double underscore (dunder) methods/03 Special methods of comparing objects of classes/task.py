@@ -1,3 +1,6 @@
+from functools import total_ordering
+
+@total_ordering
 class ChessPlayer:
 
     def __init__(self, name, surname, rating):
@@ -10,14 +13,6 @@ class ChessPlayer:
             return self.rating == other
         elif isinstance(other, ChessPlayer):
             return self.rating == other.rating
-        else:
-            return "Unable to perform a comparison"
-        
-    def __gt__(self, other):
-        if isinstance(other, int):
-            return self.rating > other
-        elif isinstance(other, ChessPlayer):
-            return self.rating > other.rating
         else:
             return "Unable to perform a comparison"
         
